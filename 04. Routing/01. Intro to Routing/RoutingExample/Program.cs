@@ -1,12 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.Use(async (context, next) =>
-{
-    Endpoint endPoint = context.GetEndpoint();
-    await next(context);
-});
-
 //enable routing
 app.UseRouting();
 
